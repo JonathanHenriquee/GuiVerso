@@ -1,0 +1,96 @@
+/* reset básico */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+
+    background-color: rgb(57, 60, 206);
+    /* display grid ativa o css grid para organizar os elementos */
+    display: grid;
+    /* cria duas colunas
+A PRIMEIRA OCUPA 1 FRAÇÃO DO ESPAÇO DISPONIVEL
+A SEGUNDA OCUPA 2 FRAÇÃO DO ESPAÇO DISPONIVEL
+
+
+*/
+
+
+    grid-template-columns: 1fr 2fr;
+    /* DEFINE E DESENHA A QUANTIDADE DE COLUNAS */
+    align-items: center;
+
+
+}
+
+
+nav{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr; /* Define 3 colunas */
+gap: 15px;
+justify-content: center;
+
+}
+
+nav a{
+color: white;
+text-decoration: none;
+
+}
+
+.professor{
+display: grid; /* ATIVA O DISPLAY GRID */
+grid-template-columns: 1fr 1fr 1fr; /* DEFINE O NUMERO DE COLUNAS */
+gap: 20px;
+padding: 20px; /* cria um espaço na seção */
+}
+
+.card{
+background-color: deepskyblue;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+}
+
+
+.card img{
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 8px;
+
+}
+
+/* RESPONSIVIDADE É A CAPACIDADE DE UMA PÁGINA DA INTERNET OU APLICATIVO AJUSTAR AUTOMATICAMENTE SEU LAYOUT, IMAGENS E ELEMENTOS VISUAIS PARA OFERECER UMA BOA EXPERIENCIA DE LEITURA E NAVEGAÇÃO EM QUALQUER APARELHO, COMO CELULARES, TABLET, LAPTOPS E MONITORES GRANDES. */
+
+
+/* media query para tablets */
+@media(max-width:800px){
+.professor{
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+/* MEDIA QUERY PARA CELULARES */
+
+@media(max-width:500px){
+header{
+grid-template-columns: 1fr;
+text-align: center;
+gap: 15px;
+}
+nav{
+justify-content: center;
+
+}
+.professor{
+grid-template-columns: 1fr;
+
+
+}
+
+}
+
